@@ -1,5 +1,5 @@
-# goit-markup-hw-06
+# goit-markup-hw-07
 Full Stack Developer FSON 82 <br>
 group_6 <br>
-Home work 6 <br>
+Home work 7 <br>
 Module 1: HTML Basics
