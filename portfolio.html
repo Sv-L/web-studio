@@ -88,13 +88,19 @@
             <li class="projects-item">
               <a class="projects-link link" href=""
                 ><div class="thumb">
-                  <img
-                    class="projects-pic"
-                    src="./images/banking-app-interface-concept.jpg"
-                    alt="banking app interface example image"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source srcset="./images/banking-app-interface-concept-desktop.jpg 1x, ./images/banking-app-interface-concept@2.jpg 2x" media="(min-width: 1200px)" type="image/jpg(/webp)"/>
+                    <source srcset="./images/banking-app-interface-concept-tablet.jpg 1x, ./images/banking-app-interface-concept@2.jpg 2x" media="(min-width: 768px)" type="image/jpg"/>
+                    <source srcset="./images/banking-app-interface-concept-mobile.jpg 1x, ./images/banking-app-interface-concept@2.jpg 2x" media="(max-width: 767px)" type="image/jpg"/>
+
+                    <img
+                      class="projects-pic"
+                      src="./images/banking-app-interface-concept.jpg"
+                      alt="banking app interface example image"
+                      width="360"
+                      height="300"
+                    />
+                  </picture>
                   <div class="projects-description">
                     <p>
                       14 Stylish and User-Friendly App Design Concepts · Task
