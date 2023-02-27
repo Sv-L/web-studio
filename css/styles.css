@@ -138,10 +138,21 @@ img {
 .features-text,
 .team-text,
 .projects-text {
+  font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
 
+.features-subtitle,
+.team-subtitle,
+.projects-sub-title {
+  margin-bottom: 8px;
+  color: var(--darc-color);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
 
 .team {
   background-color: var(--light-color);
@@ -195,14 +206,6 @@ img {
   fill: var(--light-color);
 }
 
-.team-subtitle {
-  margin-bottom: 8px;
-  color: var(--darc-color);
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-}
 .hero-title {
   margin: 0 auto;
   color: var(--prymary-color);
@@ -327,16 +330,12 @@ letter-spacing: 0.02em;
   display: none;
 }
 .features-subtitle {
-  margin-bottom: 8px;
-  color: var(--darc-color);
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
-  letter-spacing: 0.02em;
 }
 .features-text,
-.team-text,
-.projects-text {
+.team-text {
   font-weight: 500;
 }
 .doing{
@@ -348,6 +347,9 @@ letter-spacing: 0.02em;
 }
 .footer{
   padding: 96px 0;
+}
+.projects-description{
+  display: none;
 }
 }
 /*-----------------------------ТЕЛЕФОН----------------------*/
@@ -566,6 +568,20 @@ line-height: 1.11;
     .footer-subscribe-btn{
       margin: 16px auto 0;
     }
+    .projects {
+      padding-top: 48px;
+    }
+    .btn-list {
+      margin-bottom: 48px;
+    }
+    .btn-item:not(:nth-child(n+3)) {
+      display: inline-block;
+      margin-bottom: 16px;
+    }
+    .projects-item:not(:last-child){
+      margin-bottom: 48px;
+    }
+
 }
 
 
@@ -573,7 +589,7 @@ line-height: 1.11;
 
 @media screen and (min-width: 480px) {
   .container {
-    max-width: 480px;
+    max-width: 428px;
   }
 }
 
@@ -725,6 +741,25 @@ line-height: 1.17;
         align-items: center;
         gap: 24px;
       }
+      .projects {
+        padding-top: 64px;
+      }
+      .btn-list {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 64px;
+      }
+      .projects-item{
+        width: 356px;
+        
+      }
+
+      .projects-list {
+       display: flex;
+       flex-wrap: wrap;
+       row-gap: 72px;
+       column-gap: 24px;
+      }
 }
 
 
@@ -770,16 +805,7 @@ line-height: calc(24 / 16);
 .features {
   padding-top: 120px;
 }
-.features-subtitle,
-.team-subtitle,
-.projects-sub-title {
-  margin-bottom: 8px;
-  color: var(--darc-color);
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-}
+
 .features-list {
   display: flex;
   flex-wrap: nowrap;
@@ -832,62 +858,47 @@ line-height: calc(24 / 16);
     .footer-social {
       margin-right: 80px;
     }
-}
- 
-
-
-
-
-/*  
-.projects {
-  padding-top: 96px;
-}
-.btn-list {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 72px;
-}
-
-.projects-btn {
-  padding: 12px 24px;
-  color: var(--primary-brand-color);
-  background-color: var(--light-color);
-  border: 1px solid var(--accent-color);
-  border-radius: 4px;
-  transition-property: border-color, color, box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.projects-btn:is(:hover, :focus) {
-  border-color: transparent;
-  color: var(--prymary-color);
-  box-shadow: 0 3px 1px var(--box-shaow-project1),
-    0 2px 1px var(--box-shaow-project2), 0 2px 2px var(--box-shaow-project3);
+    .projects {
+      padding-top: 96px;
+    }
+    .thumb {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .projects-description {
+      position: absolute;
+      height: 100%;
+      padding: 40px 32px;
+      line-height: 1.5;
+      letter-spacing: 0.02em;
+      color: var(--light-color);
+      background-color: var(--primary-brand-color);
+      transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .projects-item:is(:hover, :focus) .projects-description {
+      transform: translateY(-100%);
+    }
+    .btn-list {
+        margin-bottom: 72px;
+    }
+    .projects-list {
+    row-gap: 48px;
+    }
 }
 
 .btn-item:not(:nth-last-child(-n + 1)) {
   margin-right: 24px;
 }
-
 .projects-text {
   font-family: inherit;
   color: var(--body-text-color);
 }
-
-.projects-list {
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 48px;
-  column-gap: 24px;
-}
-
 .projects-item {
   position: relative;
-  max-width: calc((100% - 48px) / 3);
   background: var(--prymary-color);
 }
-
 .projects-link {
   display: block;
   box-shadow: 0 1px 6px var(--box-shadow-team1);
@@ -912,30 +923,26 @@ line-height: calc(24 / 16);
   border-top: none;
 }
 
-.thumb {
-  position: relative;
-  overflow: hidden;
+
+
+
+.projects-btn {
+  padding: 12px 24px;
+  color: var(--primary-brand-color);
+  background-color: var(--light-color);
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+  transition-property: border-color, color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.projects-description {
-  position: absolute;
-  height: 100%;
-  padding: 40px 32px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--light-color);
-  background-color: var(--primary-brand-color);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.projects-btn:is(:hover, :focus) {
+  border-color: transparent;
+  color: var(--prymary-color);
+  box-shadow: 0 3px 1px var(--box-shaow-project1),
+    0 2px 1px var(--box-shaow-project2), 0 2px 2px var(--box-shaow-project3);
 }
-
-.projects-item:is(:hover, :focus) .projects-description {
-  transform: translateY(-100%);
-}
-
-
-*/
-
-
 
 
 /*-----------------------------MODAL----------------------*/
@@ -1133,8 +1140,6 @@ line-height: calc(24 / 16);
 } 
 
 
-/*----------------------IMAGE---------------------*/
-
 @media screen and (max-width: 767px) and (min-device-pixel-ratio: 2),
 (min-resolution: 192dpi),
 (min-resolution: 2dppx){
@@ -1174,5 +1179,5 @@ line-height: calc(24 / 16);
 
   }
 
-/*-------ПОЧАТОК-------------*/
+
 
