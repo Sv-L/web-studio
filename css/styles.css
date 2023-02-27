@@ -430,7 +430,7 @@ letter-spacing: 0.02em;
   margin-bottom: 40px;
 color: var(--darc-color);
 font-weight: 700;
-font-size: 36px;
+font-size: 24px;
 line-height: 1.11;
 letter-spacing: 0.02em;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -591,6 +591,8 @@ line-height: 1.11;
   .container {
     max-width: 428px;
   }
+  .mobile-menu-link {
+  font-size: 36px;}
 }
 
 
