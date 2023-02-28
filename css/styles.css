@@ -795,6 +795,9 @@ line-height: 1.11;
     max-height: 90%;
     overflow: auto;
   }
+  .mobile-menu-social {
+    gap: 56px;
+}
 }
 
 
