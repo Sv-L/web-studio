@@ -622,7 +622,7 @@ letter-spacing: 0.02em;
   margin-bottom: 40px;
 color: var(--darc-color);
 font-weight: 700;
-font-size: 24px;
+font-size: 36px;
 line-height: 1.11;
 letter-spacing: 0.02em;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -645,6 +645,7 @@ justify-content: space-between;
 }
 
 .mobile-menu-tel{
+  font-size: 26px;
   color: var(--primary-brand-color);
 }
 
@@ -786,7 +787,7 @@ line-height: 1.11;
   .container {
     width: 428px;
   }
-  .mobile-menu-link {
+  .mobile-menu-tel {
   font-size: 36px;}
   .modal {
     width: 392px;
