@@ -463,7 +463,7 @@ letter-spacing: 0.02em;
   display: flex;
   align-items: center;
   font-size: 12px;
-  line-height: calc(16 / 12);
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: var(--privacy-policy-text-color);
 }
@@ -707,9 +707,7 @@ line-height: 1.11;
 }
 
 .modal {
-  width: 82%;
-  max-width: 392px;
-  height: 100%;
+  width: 392px;
   overflow: auto;
 }
 .label-policy {
@@ -728,7 +726,7 @@ line-height: 1.11;
     padding-bottom: 128px;
      }
      .team>.container{
-      width: 264px;
+        width: 296px;
      }
 
  
@@ -789,13 +787,8 @@ line-height: 1.11;
   }
   .mobile-menu-tel {
   font-size: 36px;}
-  .modal {
-    width: 392px;
-    max-height: 586px;
-    max-height: 90%;
-    overflow: auto;
-  }
-  .mobile-menu-social {
+
+   .mobile-menu-social {
     gap: 56px;
 }
 }
@@ -902,7 +895,6 @@ line-height: 1.17;
 
   .modal {
     width: 408px;
-    height: 586px;
     overflow: auto;
   }
 
@@ -1000,9 +992,7 @@ line-height: calc(24 / 16);
       ),
       url(../images/hero.jpg);
   }
-  .modal{
-    min-height: 584px;
-}
+  
 .section {
   padding-top: 120px;
   padding-bottom: 120px;
