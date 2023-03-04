@@ -513,7 +513,9 @@ letter-spacing: 0.02em;
   .container {
     padding: 0 16px;}
   
- 
+    .footer-social {
+      margin-right: 0;
+    }
 .section {
   padding-top: 96px;
   padding-bottom: 96px;
@@ -545,6 +547,7 @@ letter-spacing: 0.02em;
   display: none;
 }
 }
+
 /*-----------------------------ТЕЛЕФОН----------------------*/
 @media screen and (max-width: 767px) {
 .header-list,
@@ -778,7 +781,15 @@ line-height: 1.11;
 
 }
 
-
+@media screen and (max-width: 479px) {
+  .modal {
+    width: 100%;
+    max-width: 392px;
+  }
+  .icon-checkbox-wrap{
+     flex-shrink: 0;
+  }
+}
 
 
 @media screen and (min-width: 480px) {
@@ -928,6 +939,7 @@ line-height: 1.17;
     .footer-wrapper{
       margin-bottom: 72px;
       display: flex;
+      flex-wrap: wrap;
       gap: 24px;
     }
     .footer-logo-text {
