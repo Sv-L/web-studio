@@ -1,4 +1,4 @@
-# goit-markup-hw-07
+# web-studio
 Full Stack Developer FSON 82 <br>
 group_6 <br>
 Home work 7 <br>
